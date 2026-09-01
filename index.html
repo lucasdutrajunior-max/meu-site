@@ -70,6 +70,14 @@
             font-weight: bold;
         }
 
+        button {
+            font-size: 20px;
+            padding: 8px 12px;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+
         @media (max-width: 600px) {
             header,
             main {
@@ -150,9 +158,24 @@
                 ou o celular e embarque conosco nessa jornada pelo incrível universo
                 dos games!
             </p>
+
+            <button>
+                ❤️ <span>0</span>
+            </button>
         </div>
 
     </main>
+
+    <script>
+        const botao = document.querySelector("button");
+
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    </script>
 
 </body>
 
