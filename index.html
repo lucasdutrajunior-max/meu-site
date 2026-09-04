@@ -50,9 +50,6 @@
 
         article {
             display: block;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
         }
 
         /* IMAGEM GRANDE E CENTRALIZADA */
@@ -100,8 +97,6 @@
             article img {
                 width: 100%;
                 height: 300px;
-                object-fit: contain;
-                margin: 0 auto 20px auto;
             }
         }
     </style>
@@ -119,9 +114,9 @@
 
     <main>
 
-        <!-- PRIMEIRO POST -->
         <article>
 
+            <!-- IMAGEM -->
             <img src="image.png" alt="CrazyGames">
 
             <div>
@@ -150,48 +145,7 @@
                     diversos gêneros de jogos.
                 </p>
 
-                <button>
-                    ❤️ <span>0</span>
-                </button>
-
-                <button>
-                    👍 <span>0</span>
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- SEGUNDO POST -->
-        <article>
-
-            <img src="image.png" alt="CrazyGames">
-
-            <div>
-
-                <h2>Dicas para Gamers</h2>
-
-                <p class="artigo-autor">
-                    Por: Lucas da Silva Dutra Junior
-                </p>
-
-                <p>
-                    Jogar videogames pode ser uma experiência muito divertida
-                    e também uma ótima maneira de desenvolver habilidades.
-                </p>
-
-                <p>
-                    Para melhorar seu desempenho, é importante conhecer bem
-                    os controles, praticar bastante e aprender com os próprios
-                    erros durante as partidas.
-                </p>
-
-                <p>
-                    Além disso, conhecer estratégias e acompanhar novidades
-                    sobre seus jogos favoritos pode ajudar bastante.
-                </p>
-
+                <!-- BOTÕES DE REAÇÃO -->
                 <button>
                     ❤️ <span>0</span>
                 </button>
@@ -206,7 +160,6 @@
 
     </main>
 
-
     <script>
 
         const botoes = document.querySelectorAll("button");
@@ -218,8 +171,6 @@
             botao.addEventListener("click", botaoClicado);
 
             function botaoClicado() {
-
-                console.log("fui clicado");
 
                 let texto = botao.querySelector("span");
 
