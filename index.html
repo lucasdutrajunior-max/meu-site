@@ -3,56 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>CrazyGames</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
 
         header {
             background-color: red;
             color: white;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
             padding: 20px;
-            border-radius: 0 0 8px 8px;
-        }
-
-        header h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            margin-bottom: 15px;
         }
 
         main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         article {
             display: block;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
         }
 
-        /* IMAGEM GRANDE E CENTRALIZADA */
         article img {
             width: 90%;
             height: 350px;
@@ -62,38 +44,34 @@
             border-radius: 8px;
         }
 
-        h2 {
-            color: red;
+        h1 {
+            text-align: center;
         }
 
-        .artigo-autor {
-            font-weight: bold;
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.5;
         }
 
         button {
-            font-size: 20px;
-            padding: 8px 12px;
-            border: none;
-            background-color: white;
+            font-size: 18px;
+            padding: 8px 15px;
+            margin-right: 10px;
             cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #eee;
+        }
+
+        button:hover {
+            background-color: #ddd;
         }
 
         @media (max-width: 600px) {
-
-            header,
-            main {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-
-            header {
-                padding: 15px;
-            }
-
-            main {
-                padding: 15px;
-            }
-
             article img {
                 width: 100%;
                 height: 300px;
@@ -106,55 +84,65 @@
 
     <header>
         <h1>CrazyGames</h1>
-
-        <p>
-            Vou compartilhar conhecimentos sobre jogabilidade e jogos.
-        </p>
     </header>
 
     <main>
 
+        <!-- PRIMEIRO POST -->
         <article>
 
             <img src="image.png" alt="CrazyGames">
 
-            <div>
+            <h1>Universo Gamer</h1>
 
-                <h2>Universo Gamer</h2>
+            <h2>Lucas da Silva Dutra Junior</h2>
 
-                <p class="artigo-autor">
-                    Por: Lucas da Silva Dutra Junior
-                </p>
+            <p>
+                O mundo dos games está sempre evoluindo e trazendo
+                novas experiências para os jogadores.
+            </p>
 
-                <p>
-                    Bem-vindo ao nosso universo gamer!
-                </p>
+            <p>
+                Existem diversos tipos de jogos, desde aventuras,
+                corridas e esportes até jogos de estratégia e ação.
+            </p>
 
-                <p>
-                    Seja muito bem-vindo ao nosso site! Se você é apaixonado por
-                    videogames, gosta de descobrir novos títulos, aprimorar suas
-                    habilidades ou acompanhar as principais novidades do mundo
-                    dos games, você está no lugar certo.
-                </p>
+            <p>
+                Os jogos também podem ajudar na criatividade,
+                no raciocínio e na interação entre as pessoas.
+            </p>
 
-                <p>
-                    Aqui você encontrará análises detalhadas, dicas de jogabilidade,
-                    guias para iniciantes e jogadores experientes, notícias do
-                    mercado, curiosidades e conteúdos especiais sobre os mais
-                    diversos gêneros de jogos.
-                </p>
+            <button>❤️ <span>0</span></button>
+            <button>👍 <span>0</span></button>
 
-                <!-- BOTÕES DE REAÇÃO -->
+        </article>
 
-                <button>
-                    ❤️ <span>0</span>
-                </button>
 
-                <button>
-                    👍 <span>0</span>
-                </button>
+        <!-- SEGUNDO POST -->
+        <article>
 
-            </div>
+            <h1>Os jogos e a diversão</h1>
+
+            <h2>Lucas da Silva Dutra Junior</h2>
+
+            <p>
+                Jogar videogames é uma forma de diversão muito popular
+                entre pessoas de diferentes idades.
+            </p>
+
+            <p>
+                Atualmente existem jogos para computadores,
+                celulares, consoles e também para jogar diretamente
+                no navegador.
+            </p>
+
+            <p>
+                Além da diversão, muitos jogos permitem que os
+                jogadores desenvolvam estratégias e trabalhem em equipe.
+            </p>
+
+            <button>❤️ <span>0</span></button>
+            <button>👍 <span>0</span></button>
 
         </article>
 
@@ -172,6 +160,8 @@
 
             function botaoClicado() {
 
+                console.log("fui clicado");
+
                 let texto = botao.querySelector("span");
 
                 if (curtiu === false) {
@@ -185,9 +175,7 @@
                     curtiu = false;
 
                 }
-
             }
-
         });
 
     </script>
