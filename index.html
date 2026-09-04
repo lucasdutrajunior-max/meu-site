@@ -159,9 +159,13 @@
                 dos games!
             </p>
 
-            <!-- Botão de Like -->
+            <!-- Botões de reação -->
             <button>
                 ❤️ <span>0</span>
+            </button>
+
+            <button>
+                👍 <span>0</span>
             </button>
 
         </div>
@@ -169,12 +173,19 @@
     </main>
 
     <script>
-    const botao = document.querySelector("button");
-botao.addEventListener("click", botaoClicado);
-function botaoClicado() {
-let texto = botao.querySelector("span");
-texto.textContent++;
-}
-</scrpt>
+        const botoes = document.querySelectorAll("button");
 
-<html>
+        botoes.forEach(function(botao) {
+
+            botao.addEventListener("click", botaoClicado);
+
+            function botaoClicado() {
+                let texto = botao.querySelector("span");
+                texto.textContent++;
+            }
+
+        });
+    </script>
+
+</body>
+</html>
